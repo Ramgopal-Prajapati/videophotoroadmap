@@ -1,0 +1,2477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Sir's Video & Photography AI Mastery | Descript, Pictory, Veed, ChatGPT, AI Tools</title>
+    <meta name="description" content="Master Video & Photography Editing with AI Tools. Comprehensive course covering Descript AI, Pictory AI, Veed AI, Freepik AI, ChatGPT, NotebookLM, Gemini, Vo3 AI with industry projects and placement assistance.">
+    <meta name="keywords" content="ram sir, ramgopal prajapati, video editing, photography editing, AI tools, descript ai, pictory ai, veed ai, freepik ai, chatgpt, notebooklm, gemini, vo3 ai, video editing course, photography course">
+    <meta name="author" content="Ramgopal Prajapati">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary: #8a2be2; /* Purple */
+            --primary-dark: #6a0dad;
+            --secondary: #00d4ff; /* Cyan */
+            --accent: #ff6b6b; /* Coral */
+            --accent-alt: #4ecdc4; /* Turquoise */
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --video-gradient: linear-gradient(135deg, #8a2be2, #00d4ff);
+            --photo-gradient: linear-gradient(135deg, #ff6b6b, #ffd93d);
+            --ai-gradient: linear-gradient(135deg, #4ecdc4, #44b78b);
+            --descript-gradient: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            --pictory-gradient: linear-gradient(135deg, #00d4ff, #0077ff);
+            --veed-gradient: linear-gradient(135deg, #8a2be2, #6a0dad);
+            --chatgpt-gradient: linear-gradient(135deg, #10a37f, #4ecdc4);
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-dark: rgba(15, 23, 42, 0.8);
+            --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.15);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --border-radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 20%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .loader-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .loader-inner:nth-child(2) {
+            border-top-color: var(--secondary);
+            width: 70%;
+            height: 70%;
+            top: 15%;
+            left: 15%;
+            animation: spin 1.2s linear infinite reverse;
+        }
+
+        .loader-inner:nth-child(3) {
+            border-top-color: var(--accent);
+            width: 50%;
+            height: 50%;
+            top: 25%;
+            left: 25%;
+            animation: spin 1.5s linear infinite;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--glass-dark);
+            backdrop-filter: blur(20px);
+            color: white;
+            padding: 1.2rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            font-size: 2.8rem;
+            background: var(--video-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(to right, white, #c4b5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 8px 0;
+            transition: var(--transition);
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--secondary);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--video-gradient);
+            color: white;
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hero-bg-element {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--video-gradient);
+            opacity: 0.1;
+            filter: blur(40px);
+        }
+
+        .hero-bg-element:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -100px;
+        }
+
+        .hero-bg-element:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            left: -50px;
+            background: var(--photo-gradient);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.2);
+            color: var(--secondary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--video-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow-lg);
+            z-index: 2;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .floating-card:nth-child(1) {
+            top: 20px;
+            right: 20px;
+            width: 200px;
+            animation-delay: 0s;
+            border-top: 4px solid var(--primary);
+        }
+
+        .floating-card:nth-child(2) {
+            bottom: 40px;
+            left: 0;
+            width: 180px;
+            animation-delay: 0.5s;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .floating-card:nth-child(3) {
+            bottom: 100px;
+            right: 0;
+            width: 220px;
+            animation-delay: 1s;
+            border-top: 4px solid var(--accent);
+        }
+
+        .floating-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .main-visual {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border: 1px solid var(--light-gray);
+        }
+
+        .ai-tools-preview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .ai-tool-icon {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .ai-tool-icon:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .ai-tool-icon i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Tech Stack Tabs */
+        .tech-tabs {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tech-tab {
+            background: white;
+            border: 2px solid var(--light-gray);
+            color: var(--gray);
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .tech-tab.active {
+            background: var(--video-gradient);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+        }
+
+        .tech-tab:hover:not(.active) {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Roadmap Section */
+        .section-header {
+            text-align: center;
+            margin: 6rem 0 3rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: var(--ai-gradient);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 5px;
+            background: var(--video-gradient);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .roadmap-timeline {
+            position: relative;
+            margin: 5rem 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: var(--video-gradient);
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            z-index: 0;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 80px;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
+            grid-row: 1;
+            padding-left: 60px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-week {
+            grid-column: 1;
+            grid-row: 1;
+            text-align: right;
+            padding-right: 60px;
+        }
+
+        .timeline-week {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 60px;
+        }
+
+        .timeline-week:nth-child(even) {
+            justify-content: flex-start;
+            padding-left: 60px;
+            padding-right: 0;
+        }
+
+        .week-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .week-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .week-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .week-number {
+            background: var(--video-gradient);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .week-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .topics-list {
+            list-style-type: none;
+            margin-bottom: 25px;
+        }
+
+        .topics-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--light-gray);
+            display: flex;
+            align-items: center;
+        }
+
+        .topics-list li i {
+            color: var(--success);
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+
+        .practice-projects h4 {
+            color: var(--accent-alt);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .practice-projects ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .practice-projects li {
+            background: var(--light-gray);
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .practice-projects li:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .timeline-content {
+            padding-left: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-content .week-card {
+            border-left: 5px solid var(--accent-alt);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content .week-card {
+            border-left: none;
+            border-right: 5px solid var(--secondary);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 5rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--light-gray);
+        }
+
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--video-gradient);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            display: inline-block;
+            background: var(--video-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            background: var(--dark);
+            color: white;
+            padding: 6rem 0;
+            margin: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose:before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            border-radius: 50%;
+            filter: blur(100px);
+            top: -150px;
+            right: -150px;
+            opacity: 0.2;
+        }
+
+        .why-choose:after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--accent-alt);
+            border-radius: 50%;
+            filter: blur(100px);
+            bottom: -150px;
+            left: -150px;
+            opacity: 0.2;
+        }
+
+        .why-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-image {
+            position: relative;
+        }
+
+        .why-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .why-stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .why-stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--secondary), var(--accent-alt));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Tech Stack Section */
+        .tech-stack {
+            margin: 6rem 0;
+        }
+
+        .stack-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stack-item {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 5px solid;
+        }
+
+        .stack-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stack-item:nth-child(1) {
+            border-color: #ff6b6b; /* Descript AI */
+        }
+        .stack-item:nth-child(2) {
+            border-color: #00d4ff; /* Pictory AI */
+        }
+        .stack-item:nth-child(3) {
+            border-color: #8a2be2; /* Veed AI */
+        }
+        .stack-item:nth-child(4) {
+            border-color: #10a37f; /* ChatGPT */
+        }
+        .stack-item:nth-child(5) {
+            border-color: #4ecdc4; /* NotebookLM */
+        }
+        .stack-item:nth-child(6) {
+            border-color: #4285f4; /* Gemini */
+        }
+        .stack-item:nth-child(7) {
+            border-color: #1e88e5; /* Vo3 AI */
+        }
+        .stack-item:nth-child(8) {
+            border-color: #ff7e5f; /* Freepik AI */
+        }
+
+        .stack-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .stack-icon.descript { color: #ff6b6b; }
+        .stack-icon.pictory { color: #00d4ff; }
+        .stack-icon.veed { color: #8a2be2; }
+        .stack-icon.chatgpt { color: #10a37f; }
+        .stack-icon.notebooklm { color: #4ecdc4; }
+        .stack-icon.gemini { color: #4285f4; }
+        .stack-icon.vo3 { color: #1e88e5; }
+        .stack-icon.freepik { color: #ff7e5f; }
+
+        .stack-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        /* Trainer Section */
+        .trainer-section {
+            margin: 6rem 0;
+        }
+
+        .trainer-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid var(--light-gray);
+        }
+
+        .trainer-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trainer-image:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.7));
+            z-index: 1;
+        }
+
+        .trainer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .trainer-card:hover .trainer-image img {
+            transform: scale(1.05);
+        }
+
+        .trainer-info {
+            padding: 50px;
+        }
+
+        .trainer-name {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .trainer-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .trainer-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .skill-tag {
+            background: var(--light-gray);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .skill-tag:nth-child(1) {
+            background: rgba(138, 43, 226, 0.1);
+            color: var(--primary);
+        }
+
+        .skill-tag:nth-child(2) {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--secondary);
+        }
+
+        .skill-tag:nth-child(3) {
+            background: rgba(255, 107, 107, 0.1);
+            color: var(--accent);
+        }
+
+        .skill-tag:nth-child(4) {
+            background: rgba(78, 205, 196, 0.1);
+            color: var(--accent-alt);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            margin: 6rem 0;
+        }
+
+        .testimonial-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 5rem;
+            color: var(--light-gray);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--video-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .author-info h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 6rem 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--light-gray);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 30px 30px;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .faq-toggle {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--video-gradient);
+            padding: 80px 0;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin: 6rem 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -150px;
+            right: -150px;
+        }
+
+        .cta-section:after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            background: white;
+            color: var(--primary);
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .btn-cta-alt {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-cta-alt:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 5rem 0 2rem;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 4rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: white;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -8px;
+            left: 0;
+            border-radius: 3px;
+        }
+
+        .footer-links {
+            list-style-type: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .newsletter-form {
+            margin-top: 25px;
+        }
+
+        .newsletter-input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--video-gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 99;
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+            border: none;
+        }
+
+        #backToTop.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #backToTop:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
+        }
+
+        /* Animations */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1100px) {
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .timeline-line {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                grid-template-columns: 1fr;
+                margin-bottom: 50px;
+            }
+            
+            .timeline-week, .timeline-content {
+                padding: 0 !important;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-week {
+                grid-column: 1;
+                grid-row: 1;
+                text-align: left;
+            }
+            
+            .week-card {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .trainer-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .why-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2.2rem;
+            }
+            
+            .trainer-name {
+                font-size: 2rem;
+            }
+            
+            .floating-card {
+                display: none;
+            }
+            
+            .practice-projects ul {
+                grid-template-columns: 1fr;
+            }
+            
+            .stack-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .ai-tools-preview {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .tech-tab {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .testimonial-slider {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .why-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .stack-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .ai-tools-preview {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h1>Ram Sir <span>AI Video & Photo</span></h1>
+                </div>
+                
+                <nav class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#roadmap" class="nav-link">Roadmap</a>
+                    <a href="#tech-stack" class="nav-link">AI Tools</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#trainer" class="nav-link">Trainer</a>
+                    <a href="#testimonials" class="nav-link">Success Stories</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-book-open"></i> Curriculum
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Enroll Now
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-elements">
+            <div class="hero-bg-element"></div>
+            <div class="hero-bg-element"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-bolt"></i> 3-Month Intensive Program
+                    </div>
+                    <h2>Master Video & Photography Editing with AI</h2>
+                    <p>Become a professional video editor and photographer using cutting-edge AI tools like Descript, Pictory, Veed AI, ChatGPT, and more. Transform your creative skills with AI-powered editing.</p>
+                    
+                    <div class="tech-tabs">
+                        <button class="tech-tab active" data-tech="video">
+                            <i class="fas fa-video"></i> Video Editing AI
+                        </button>
+                        <button class="tech-tab" data-tech="photo">
+                            <i class="fas fa-camera"></i> Photography AI
+                        </button>
+                        <button class="tech-tab" data-tech="creative">
+                            <i class="fas fa-brain"></i> Creative AI
+                        </button>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value">94%</div>
+                            <div class="stat-label">Placement Rate</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">350+</div>
+                            <div class="stat-label">Students Trained</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">8</div>
+                            <div class="stat-label">AI Tools</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <h4><i class="fas fa-robot"></i> AI-Powered Editing</h4>
+                        <p>Edit videos with text commands</p>
+                    </div>
+                    <div class="floating-card">
+                        <h4><i class="fas fa-certificate"></i> Industry Certification</h4>
+                        <p>Get certified in AI editing</p>
+                    </div>
+                    <div class="floating-card">
+                        <h4><i class="fas fa-briefcase"></i> Freelance Ready</h4>
+                        <p>Start earning within weeks</p>
+                    </div>
+                    
+                    <div class="main-visual">
+                        <h3>AI Editing Toolbox</h3>
+                        <div class="ai-tools-preview">
+                            <div class="ai-tool-icon">
+                                <i class="fas fa-wave-square" style="color: #ff6b6b;"></i>
+                                <div>Descript AI</div>
+                            </div>
+                            <div class="ai-tool-icon">
+                                <i class="fas fa-film" style="color: #00d4ff;"></i>
+                                <div>Pictory AI</div>
+                            </div>
+                            <div class="ai-tool-icon">
+                                <i class="fas fa-play-circle" style="color: #8a2be2;"></i>
+                                <div>Veed AI</div>
+                            </div>
+                            <div class="ai-tool-icon">
+                                <i class="fas fa-comment-dots" style="color: #10a37f;"></i>
+                                <div>ChatGPT</div>
+                            </div>
+                            <div class="ai-tool-icon">
+                                <i class="fas fa-book" style="color: #4ecdc4;"></i>
+                                <div>NotebookLM</div>
+                            </div>
+                            <div class="ai-tool-icon">
+                                <i class="fas fa-gem" style="color: #4285f4;"></i>
+                                <div>Gemini</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <i class="fas fa-road"></i> 3-Month Learning Path
+                </div>
+                <h2 class="section-title">AI Video & Photo Editing Roadmap</h2>
+                <p class="section-subtitle">From basic editing to AI-powered professional workflows with real-world projects and freelance training.</p>
+            </div>
+            
+            <div class="roadmap-timeline">
+                <div class="timeline-line"></div>
+                
+                <!-- Weeks will be dynamically added here -->
+                <div id="roadmap-weeks-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <i class="fas fa-layer-group"></i> Complete AI Toolbox
+                </div>
+                <h2 class="section-title">Master 8 Powerful AI Tools</h2>
+                <p class="section-subtitle">Learn industry-leading AI tools that are revolutionizing video and photography editing.</p>
+            </div>
+            
+            <div class="stack-container">
+                <div class="stack-item">
+                    <div class="stack-icon descript">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3>Descript AI</h3>
+                    <p>Edit videos by editing text, auto-transcription, voice cloning, screen recording</p>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon pictory">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Pictory AI</h3>
+                    <p>Create videos from text, blog posts, scripts with AI voiceovers and stock footage</p>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon veed">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>Veed AI</h3>
+                    <p>Auto-subtitles, video translations, background removal, AI avatars</p>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon chatgpt">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>ChatGPT</h3>
+                    <p>Script writing, content planning, SEO optimization, creative ideation</p>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon notebooklm">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>NotebookLM</h3>
+                    <p>Research organization, content analysis, project planning, knowledge management</p>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon gemini">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Google Gemini</h3>
+                    <p>Advanced research, content creation, market analysis, trend prediction</p>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon vo3">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3>Vo3 AI</h3>
+                    <p>Voice synthesis, text-to-speech, voice cloning, multilingual voiceovers</p>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon freepik">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Freepik AI</h3>
+                    <p>AI image generation, graphic design, photo enhancement, custom illustrations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <i class="fas fa-star"></i> Why Choose Us
+                </div>
+                <h2 class="section-title">Premium AI Editing Experience</h2>
+                <p class="section-subtitle">We provide everything you need to become a professional video editor and photographer with AI tools.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Live Interactive Classes</h3>
+                    <p>Daily live sessions with real-time editing, AI tool demonstrations, and project guidance with Ram Sir.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Real-World Projects</h3>
+                    <p>Create 8+ industry projects including YouTube videos, social media content, commercials, and portfolios.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Tool Mastery</h3>
+                    <p>Master 8 cutting-edge AI tools for video editing, photo editing, content creation, and automation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Freelance Training</h3>
+                    <p>Learn how to find clients, price your services, create portfolios, and build a freelance business.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Portfolio Building</h3>
+                    <p>Create an impressive portfolio with 8+ professional projects to showcase to clients and employers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community & Support</h3>
+                    <p>24/7 doubt support in dedicated Discord community, client referrals, and collaboration opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="why-content">
+                <div class="why-image">
+                    <div style="width: 100%; height: 400px; background: linear-gradient(45deg, var(--primary), var(--accent-alt)); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-chart-line" style="font-size: 4rem; margin-bottom: 20px; display: block;"></i>
+                            AI Editing Career Growth
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-text">
+                    <div class="section-tag" style="background: white; color: var(--dark);">
+                        <i class="fas fa-award"></i> Proven Results
+                    </div>
+                    <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Why 350+ Creative Professionals Chose Ram Sir</h2>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">Our AI-first approach helps you edit 10x faster than traditional methods. Learn how to leverage AI for video editing, photography, and content creation to stand out in the creative industry.</p>
+                    
+                    <div class="why-stats">
+                        <div class="why-stat">
+                            <div class="why-stat-value">94%</div>
+                            <div>Placement Success Rate</div>
+                        </div>
+                        <div class="why-stat">
+                            <div class="why-stat-value">8+</div>
+                            <div>AI Tools Mastered</div>
+                        </div>
+                        <div class="why-stat">
+                            <div class="why-stat-value">50+</div>
+                            <div>Freelance Projects</div>
+                        </div>
+                        <div class="why-stat">
+                            <div class="why-stat-value">4.9/5</div>
+                            <div>Average Student Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainer Section -->
+    <section id="trainer">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <i class="fas fa-user-graduate"></i> Meet Your Mentor
+                </div>
+                <h2 class="section-title">Ram Sir (Ramgopal Prajapati)</h2>
+                <p class="section-subtitle">AI Video Editing Expert & Creative Director</p>
+            </div>
+            
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #1e293b, #475569); display: flex; align-items: center; justify-content: center; color: white;">
+                        <div style="text-align: center; padding: 30px;">
+                            <div style="width: 200px; height: 200px; background: var(--video-gradient); border-radius: 50%; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3 style="font-size: 2rem; margin-bottom: 10px;">Ram Sir</h3>
+                            <p>AI Video & Photo Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trainer-info">
+                    <h3 class="trainer-name">Ramgopal Prajapati</h3>
+                    <div class="trainer-title">Creative Director & AI Editing Expert</div>
+                    
+                    <p style="color: var(--gray); margin-bottom: 25px;">With over 6 years of experience in video editing, photography, and AI tools, Ram Sir has trained 350+ students in creative technologies. His unique teaching methodology focuses on practical AI implementation for real-world creative projects.</p>
+                    
+                    <div class="trainer-skills">
+                        <div class="skill-tag">Video Editing</div>
+                        <div class="skill-tag">AI Tools</div>
+                        <div class="skill-tag">Photography</div>
+                        <div class="skill-tag">Creative Direction</div>
+                    </div>
+                    
+                    <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div>
+                            <h4 style="color: var(--dark); margin-bottom: 10px;">Experience</h4>
+                            <ul style="list-style-type: none; color: var(--gray);">
+                                <li><i class="fas fa-check-circle" style="color: var(--success); margin-right: 8px;"></i> Video Editor (5 years)</li>
+                                <li><i class="fas fa-check-circle" style="color: var(--success); margin-right: 8px;"></i> AI Tools Trainer (3+ years)</li>
+                                <li><i class="fas fa-check-circle" style="color: var(--success); margin-right: 8px;"></i> Freelance Projects (200+)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--dark); margin-bottom: 10px;">Expertise</h4>
+                            <ul style="list-style-type: none; color: var(--gray);">
+                                <li><i class="fas fa-video" style="color: var(--primary); margin-right: 8px;"></i> AI Video Editing</li>
+                                <li><i class="fas fa-camera" style="color: var(--accent); margin-right: 8px;"></i> Photography AI</li>
+                                <li><i class="fas fa-robot" style="color: var(--secondary); margin-right: 8px;"></i> Creative AI Tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <i class="fas fa-comment-dots"></i> Student Success Stories
+                </div>
+                <h2 class="section-title">What Our Students Say</h2>
+                <p class="section-subtitle">Join hundreds of successful creative professionals who transformed their careers with our AI editing program.</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Ram Sir's AI-first approach changed everything! I went from spending hours editing to creating professional YouTube videos in minutes with Descript AI. Now I run a successful YouTube channel with 50K subscribers."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PK</div>
+                        <div class="author-info">
+                            <h4>Priya Kaur</h4>
+                            <p>YouTube Content Creator</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The 3-month roadmap was perfectly structured. I learned 8 AI tools that helped me start my freelance business. Now I earn ₹50,000+ monthly editing videos for clients using AI tools taught by Ram Sir."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RS</div>
+                        <div class="author-info">
+                            <h4>Rohit Sharma</h4>
+                            <p>Freelance Video Editor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "As a photographer struggling with post-processing, Ram Sir's course on AI photo editing was a game-changer. I now edit wedding photos 5x faster and have doubled my client bookings."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <h4>Anjali Mehta</h4>
+                            <p>Professional Photographer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <i class="fas fa-question-circle"></i> Common Questions
+                </div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Get answers to the most common questions about our AI Video & Photo Editing program.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need prior video editing experience for this course?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No prior experience is required. We start from absolute basics of video editing and gradually progress to advanced AI tools. The course is designed for complete beginners as well as experienced editors wanting to learn AI tools.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What AI tools will I learn during the course?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        You'll master 8 powerful AI tools: Descript AI (video editing by text), Pictory AI (text to video), Veed AI (auto-subtitles & translations), ChatGPT (script writing), NotebookLM (research), Google Gemini (content creation), Vo3 AI (voice synthesis), and Freepik AI (image generation).
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Will I learn how to earn money with these skills?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We cover freelance training including how to find clients on Upwork/Fiverr, price your services, create portfolios, handle client communication, and build a sustainable freelance business. Many students start earning within 2 months.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there any placement assistance?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We provide complete placement assistance including portfolio building, LinkedIn optimization, client referrals, mock interviews, and direct job opportunities with our partner companies in media, marketing, and content creation.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is the duration and schedule of the program?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        The program is 3 months long with 2-hour classes from Monday to Friday. We also offer weekend batches. Recordings are available for missed classes. Daily practice assignments and weekly real-world projects ensure you build a strong portfolio.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Start Your AI Video Editing Journey</h2>
+            <p class="cta-subtitle">Join India's most comprehensive AI Video & Photography Editing program today. Limited seats available for the next batch starting on 15th December.</p>
+            
+            <div class="cta-buttons">
+                <button class="btn btn-cta">
+                    <i class="fas fa-rocket"></i> Enroll Now at 40% Off
+                </button>
+                <button class="btn btn-cta-alt">
+                    <i class="fas fa-calendar"></i> Book Free Demo Class
+                </button>
+            </div>
+            
+            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700;">20</div>
+                    <div>Seats Left</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700;">10 Days</div>
+                    <div>Offer Ends In</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700;">₹12,999</div>
+                    <div>Special Price</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Ram Sir AI Video & Photo</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 25px;">Master AI-powered video and photography editing with industry projects. 6+ years of creative teaching with 350+ successful placements in media industry.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/iamramsir" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ramgopal-prajapati" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@ramsir" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://github.com/Ramgopal-prajapati" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#roadmap"><i class="fas fa-chevron-right"></i> Learning Roadmap</a></li>
+                        <li><a href="#tech-stack"><i class="fas fa-chevron-right"></i> AI Tools</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Course Features</a></li>
+                        <li><a href="#trainer"><i class="fas fa-chevron-right"></i> Trainer Profile</a></li>
+                        <li><a href="#faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>AI Tools Covered</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-wave-square"></i> Descript AI</a></li>
+                        <li><a href="#"><i class="fas fa-film"></i> Pictory AI</a></li>
+                        <li><a href="#"><i class="fas fa-play-circle"></i> Veed AI</a></li>
+                        <li><a href="#"><i class="fas fa-comment-dots"></i> ChatGPT</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> NotebookLM</a></li>
+                        <li><a href="#"><i class="fas fa-gem"></i> Google Gemini</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Indore, Madhya Pradesh, India</a></li>
+                        <li><a href="tel:+919753528324"><i class="fas fa-phone"></i> +91 9753528324</a></li>
+                        <li><a href="mailto:ramsirdevix@gmail.com"><i class="fas fa-envelope"></i> ramsirdevix@gmail.com</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Mon-Sat: 10AM - 8PM</a></li>
+                    </ul>
+                    
+                    <div class="newsletter-form">
+                        <h4 style="color: white; margin-bottom: 15px; font-size: 1rem;">Get Course Brochure</h4>
+                        <input type="email" class="newsletter-input" placeholder="Your email address">
+                        <button class="btn btn-primary" style="width: 100%;">Download Brochure</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Ram Sir AI Video & Photo Editing | Designed with <i class="fas fa-heart" style="color: #ef4444;"></i> for creative professionals</p>
+                <p style="margin-top: 10px;">Keywords: ram sir, ramgopal prajapati, video editing, photography editing, AI tools, descript ai, pictory ai, veed ai, freepik ai, chatgpt, notebooklm, gemini, vo3 ai, video editing course, photography course</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('preloader').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Roadmap Data for AI Video & Photo Editing
+        const roadmapData = [
+            {
+                week: "Month 1",
+                title: "Video Editing Fundamentals & Descript AI",
+                topics: [
+                    "Video Editing Basics: Cuts, Transitions, Effects",
+                    "Descript AI: Text-based Video Editing",
+                    "Auto Transcription & Caption Generation",
+                    "Voice Cloning & AI Voiceovers",
+                    "Screen Recording & Tutorial Creation",
+                    "Export Formats & Quality Settings"
+                ],
+                projects: [
+                    "YouTube Intro Video",
+                    "Social Media Reel",
+                    "Product Demo Video",
+                    "Interview Editing",
+                    "Podcast Episode"
+                ]
+            },
+            {
+                week: "Month 2",
+                title: "AI Video Creation & Advanced Tools",
+                topics: [
+                    "Pictory AI: Text to Video Creation",
+                    "Veed AI: Auto Subtitles & Translations",
+                    "AI Background Removal & Effects",
+                    "ChatGPT for Script Writing",
+                    "NotebookLM for Research & Planning",
+                    "Google Gemini for Content Strategy"
+                ],
+                projects: [
+                    "Blog to Video Conversion",
+                    "Multilingual Video Content",
+                    "Educational Explainer Video",
+                    "Marketing Commercial",
+                    "Event Highlights Video"
+                ]
+            },
+            {
+                week: "Month 3",
+                title: "Photography AI & Freelance Business",
+                topics: [
+                    "Freepik AI: Image Generation & Editing",
+                    "AI Photo Enhancement & Restoration",
+                    "Vo3 AI: Voice Synthesis & Dubbing",
+                    "Freelance Portfolio Building",
+                    "Client Acquisition & Pricing",
+                    "Business Management & Scaling"
+                ],
+                projects: [
+                    "Professional Photo Portfolio",
+                    "E-commerce Product Photos",
+                    "Real Estate Virtual Tour",
+                    "Wedding Photography Editing",
+                    "Complete Client Project"
+                ]
+            }
+        ];
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load roadmap
+            loadRoadmap();
+            
+            // Setup tech tabs
+            setupTechTabs();
+            
+            // Setup FAQ accordion
+            setupFAQ();
+            
+            // Setup animations
+            setupAnimations();
+            
+            // Setup mobile menu
+            setupMobileMenu();
+            
+            // Setup back to top button
+            setupBackToTop();
+            
+            // Setup newsletter form
+            setupNewsletter();
+        });
+
+        // Load roadmap
+        function loadRoadmap() {
+            const container = document.getElementById('roadmap-weeks-container');
+            
+            // Clear container
+            container.innerHTML = '';
+            
+            // Add roadmap weeks
+            roadmapData.forEach((week, index) => {
+                const weekElement = document.createElement('div');
+                weekElement.className = 'timeline-item';
+                weekElement.style.animationDelay = `${index * 0.1}s`;
+                
+                weekElement.innerHTML = `
+                    <div class="timeline-week">
+                        <div class="week-card">
+                            <div class="week-header">
+                                <div class="week-number">${index+1}</div>
+                                <div class="week-title">${week.week}</div>
+                            </div>
+                            <h3 style="color: var(--primary); margin-bottom: 15px;">${week.title}</h3>
+                            <h4 style="color: var(--dark); margin-bottom: 10px; font-size: 1.1rem;">Topics Covered:</h4>
+                            <ul class="topics-list">
+                                ${week.topics.map(topic => `<li><i class="fas fa-check-circle"></i> ${topic}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="week-card">
+                            <div class="practice-projects">
+                                <h4><i class="fas fa-video"></i> Hands-on Projects</h4>
+                                <ul>
+                                    ${week.projects.map(project => `<li>${project}</li>`).join('')}
+                                </ul>
+                            </div>
+                            <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--light-gray);">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--gray);">
+                                    <div><i class="far fa-clock"></i> 15-20 hours/week</div>
+                                    <div><i class="far fa-file-video"></i> 5-6 projects</div>
+                                    <div><i class="far fa-check-circle"></i> Weekly client briefs</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(weekElement);
+            });
+            
+            // Trigger animation
+            setTimeout(() => {
+                document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('animate');
+                    }, index * 100);
+                });
+            }, 300);
+        }
+
+        // Setup tech tabs
+        function setupTechTabs() {
+            document.querySelectorAll('.tech-tab').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.tech-tab').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get tech type
+                    const tech = this.getAttribute('data-tech');
+                    
+                    // Scroll to relevant section
+                    if (tech === 'video') {
+                        document.querySelector('#tech-stack').scrollIntoView({ behavior: 'smooth' });
+                    } else if (tech === 'photo') {
+                        // Highlight photography tools
+                        document.querySelectorAll('.stack-item')[7].style.transform = 'translateY(-10px)';
+                        setTimeout(() => {
+                            document.querySelectorAll('.stack-item')[7].style.transform = 'translateY(0)';
+                        }, 500);
+                    } else if (tech === 'creative') {
+                        // Highlight creative AI tools
+                        document.querySelectorAll('.stack-item')[3].style.transform = 'translateY(-10px)';
+                        document.querySelectorAll('.stack-item')[4].style.transform = 'translateY(-10px)';
+                        setTimeout(() => {
+                            document.querySelectorAll('.stack-item')[3].style.transform = 'translateY(0)';
+                            document.querySelectorAll('.stack-item')[4].style.transform = 'translateY(0)';
+                        }, 500);
+                    }
+                    
+                    // Animate the change
+                    this.style.animation = 'pulse 0.5s ease';
+                    setTimeout(() => {
+                        this.style.animation = '';
+                    }, 500);
+                });
+            });
+        }
+
+        // Setup FAQ accordion
+        function setupFAQ() {
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    const item = this.parentElement;
+                    item.classList.toggle('active');
+                });
+            });
+        }
+
+        // Setup animations
+        function setupAnimations() {
+            // Animate elements when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Observe elements
+            document.querySelectorAll('.timeline-item, .feature-card, .testimonial-card, .stack-item').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Floating animation for logo
+            const logoIcon = document.querySelector('.logo-icon');
+            if (logoIcon) {
+                setInterval(() => {
+                    logoIcon.style.animation = 'float 6s ease-in-out infinite';
+                }, 100);
+            }
+        }
+
+        // Setup mobile menu
+        function setupMobileMenu() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                    if (navLinks.style.display === 'flex') {
+                        navLinks.style.flexDirection = 'column';
+                        navLinks.style.position = 'absolute';
+                        navLinks.style.top = '100%';
+                        navLinks.style.left = '0';
+                        navLinks.style.width = '100%';
+                        navLinks.style.background = 'var(--dark)';
+                        navLinks.style.padding = '20px';
+                        navLinks.style.gap = '20px';
+                        navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                    }
+                });
+                
+                // Close menu when clicking on a link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (window.innerWidth <= 900) {
+                            navLinks.style.display = 'none';
+                        }
+                    });
+                });
+            }
+            
+            // Adjust on window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 900) {
+                    navLinks.style.display = 'flex';
+                    navLinks.style.flexDirection = 'row';
+                    navLinks.style.position = 'static';
+                    navLinks.style.background = 'transparent';
+                    navLinks.style.padding = '0';
+                    navLinks.style.boxShadow = 'none';
+                    navLinks.style.width = 'auto';
+                } else {
+                    navLinks.style.display = 'none';
+                }
+            });
+        }
+
+        // Setup back to top button
+        function setupBackToTop() {
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Setup newsletter form
+        function setupNewsletter() {
+            const newsletterForm = document.querySelector('.newsletter-form');
+            
+            if (newsletterForm) {
+                const newsletterInput = newsletterForm.querySelector('.newsletter-input');
+                const newsletterBtn = newsletterForm.querySelector('.btn');
+                
+                newsletterBtn.addEventListener('click', function() {
+                    if (newsletterInput.value && newsletterInput.value.includes('@')) {
+                        newsletterInput.value = '';
+                        newsletterInput.placeholder = 'Brochure sent to your email!';
+                        newsletterBtn.textContent = 'Sent!';
+                        newsletterBtn.style.background = 'var(--success)';
+                        
+                        setTimeout(() => {
+                            newsletterInput.placeholder = 'Your email address';
+                            newsletterBtn.textContent = 'Download Brochure';
+                            newsletterBtn.style.background = '';
+                        }, 3000);
+                    }
+                });
+            }
+        }
+
+        // Add hover effects to interactive elements
+        document.querySelectorAll('.btn, .tech-tab, .social-icon, .practice-projects li, .ai-tool-icon').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Enroll button functionality
+        document.querySelectorAll('.btn-primary, .btn-cta').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Thank you for your interest in AI Video & Photo Editing! Our team will contact you shortly for enrollment details.');
+            });
+        });
+
+        // Demo class button
+        document.querySelector('.btn-cta-alt').addEventListener('click', function() {
+            alert('Free demo class booked! We will send you the schedule and access to sample AI tools via email.');
+        });
+    </script>
+</body>
+</html>
